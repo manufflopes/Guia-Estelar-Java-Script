@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+        <script src="./2.objects&arrays.js"></script>
+    </head>
+    <body>
+        <script>
+            // Object
+
+            const person = {
+                name: 'João',
+                age: 30,
+                weight: 88.6,
+                isAdmin: true
+            }
+            console.log(person)
+            console.log(person.name)
+            console.log(`${person.name} tem ${person.age} anos.`)
+
+            // Arrays
+
+            const animals = ['lion', 'monkey', 'bird', 'snake', 'mouse', 'cat']
+            console.log(animals.length)
+            console.log(animals[3])
+
+            // acessar valores dentro do Array
+
+            const pets = [
+                'lion',
+                'monkey',
+                'bird',
+                'snake',
+                'mouse',
+                {
+                    name: 'cat',
+                    petname: 'Mingau',
+                    age: 3
+                }
+            ]
+
+            console.log(
+                `The ${pets[5].name} called ${pets[5].petname} has ${pets[5].age} years old.`
+            )
+        </script>
+    </body>
+</html>

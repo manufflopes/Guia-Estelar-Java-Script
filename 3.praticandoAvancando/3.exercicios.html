@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+        <script src="./3.exercicios.js"></script>
+    </head>
+    <body>
+        <script>
+            // 1. declare uma variavel de nome 'weight'
+            let weight
+
+            // 2. que tipo de dado é a variável acima ?
+            console.log(typeof weight)
+
+            // 3. declare uma variavel e atribua valores para cada um dos dados:
+            // * name: String
+            // * age: Number (integer)
+            // * stars: Number (float)
+            // * isSubscribed: Boolean
+
+            let bestFriend = {
+                name: 'Nati',
+                age: 34,
+                stars: 9.5,
+                isSubscribed: true
+            }
+            console.log(bestFriend)
+
+            console.log(
+                `My best friend called ${bestFriend.name} and she has ${bestFriend.age} years old. I gave to her ${bestFriend.stars} stars and all of these is ${bestFriend.isSubscribed}.`
+            )
+
+            // 4. a variável student abaixo é de que tipo de dado ?
+            let student = {}
+
+            console.log(typeof student)
+            // 4.1 atribua a ela as mesmas propriedades e valores do exercicio 3
+            let college = {
+                name: 'Thulio',
+                age: 35,
+                stars: 9.9,
+                isSubscribed: true,
+                weight: 100
+            }
+            console.log(college)
+            // 4.2 mostre no console a seguinte mensagem:
+            // <name> de idade <age> pesa <weight> Kg.
+            console.log(
+                `${college.name} is ${college.age} years old and has ${college.weight} Kg.`
+            )
+
+            // 5. declare uma variavel do tipo Array, de nome student e atribua a ela nenhum valor, ou seja, somente o Array vazio
+            let school = []
+
+            // 6. reatribua valor para a variável acima, colocando dentro dela o objeto student da questao 4.
+            school = [college]
+            console.log(school)
+
+            // 7. coloque no console o valor da posição zero do Array acima
+
+            console.log(school[0])
+
+            // 8. crie um novo student (college) e coloque na posição 1 do Array students
+            let collegeThulio = {
+                name: 'Thulio',
+                age: 35,
+                stars: 9.9,
+                isSubscribed: true,
+                weight: 100
+            }
+            let collegeLucas = {
+                name: 'Lucas',
+                age: 29,
+                stars: 9.9,
+                isSubscribed: true,
+                weight: 80
+            }
+
+            school = [collegeThulio, collegeLucas]
+
+            console.log(school)
+            console.log(school[1])
+            school[1] = collegeLucas
+            // 9. sem rodar o código responda qual é a resposta do código abaixo e porque. Apos sua resposta, rode o codigo e veja se você acertou.
+            console.log(a)
+            var a = 1
+            //tecnicamente seria 1 pq a var se lê em qualquer posição... mas como esta declarada depois do código sera tratada com undefined por conta do hosting
+
+            console.log(ab)
+            let ab = 1
+            
+        </script>
+    </body>
+</html>
