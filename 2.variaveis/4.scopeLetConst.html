@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+        <script src="./4.scopeLetConst.js"></script>
+    </head>
+    <body>
+        // const e led são locais e só funcionam no escopo onde foram criadas
+
+        <script>
+            let y = 1
+            {
+                let y = 0
+                console.log('> existe y antes do bloco ?', y)
+            }
+            console.log('> existe y depois do bloco?', y)
+            
+        </script>
+
+        <script>
+            const w = 12
+            {
+                const w = 0
+                console.log('> existe w antes do bloco ?', w)
+            }
+            console.log('> existe w depois do bloco?', w)
+
+        </script>
+    </body>
+</html>
