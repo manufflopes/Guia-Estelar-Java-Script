@@ -1,3 +1,6 @@
+console.log('Bem vindos ao Starter')
+console.log('não iria ignorar')
+
 /* 
 String 
     *Cadeia de caracteres
