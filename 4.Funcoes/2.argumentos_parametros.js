@@ -3,7 +3,7 @@
 
 // parametros (parameters)
 
-const sum = function (number1, number2) {
+let sum = function (number1, number2) {
     console.log(number1 + number2)
 }
 
@@ -15,7 +15,7 @@ sum(25, 39)
 let total = 0
 
 const plus = function (number1, number2) {
-   let total = number1 + number2
+    let total = number1 + number2
     return total
 }
 
@@ -29,14 +29,36 @@ console.log(total)
 
 // outras maneiras de entender funções
 
-// função é um liquidificador 
+// função é um liquidificador
 
-function fazerSuco(fruta1,fruta2) {
-    return 'suco de: ' + fruta1+ ' com '+ fruta2
+let frutasBatidas = []
+
+function fazerSuco(fruta1, fruta2) {
+    frutasBatidas.push(fruta1)
+    frutasBatidas.push(fruta2)
+    return 'suco de: ' + frutasBatidas.join(' com ')
 }
 
-const copo = fazerSuco('maçã','banana')
-
+let copo = fazerSuco('maçã', 'banana')
 console.log(copo)
 
+copo = fazerSuco('laranja', 'cenoura')
+console.log(copo)
 
+copo = fazerSuco('morango', 'laranja')
+console.log(copo)
+
+function firstLetter(pessoa) {
+    return pessoa.charAt(0)
+}
+console.log(firstLetter('Manuella'))
+console.log(firstLetter('Thulio'))
+console.log(firstLetter('Vitor'))
+console.log(firstLetter('Renilde'))
+console.log(firstLetter('Lucas'))
+
+let pessoas = ['Manuella', 'Thulio', 'Vitor', 'Renilde', 'Lucas']
+
+for (let pessoa = 0; pessoa < pessoas.length; pessoa++) {
+    console.log(firstLetter(pessoas[pessoa]))
+}
