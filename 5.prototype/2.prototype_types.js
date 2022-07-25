@@ -8,11 +8,11 @@
     Type conversion se trata de uma conversão de tipo feita pelo dev, explicitamente, e pode ser feita de diversas maneiras, por exemplo com o método Number(), já type coersion é uma mudança de tipos feita pelo próprio JavaScript, implicitamente, por exemplo quando você tenta somar um número na forma string com um número do tipo número.
 */
 
-console.log("9"+5)
+console.log('9' + 5)
 
 //coersão de tipo
 
-console.log(Number('9')+5)
+console.log(Number('9') + 5)
 
 /* Strings em números
 Transformar string em numero e numero em string
@@ -20,11 +20,10 @@ Transformar string em numero e numero em string
 É possível transformar números em formato de string através do método Number() e números em formato number em string usando o método String().
 */
 
-let string = "123"
+let string = '123'
 console.log(Number(string))
 let number = 321
 console.log(String(number))
-
 
 /*
     Manipulando Strings e Números
@@ -34,7 +33,7 @@ console.log(String(number))
     Contar quantos caracteres tem uma palavra e quantos digitos tem um número
 */
 
-let word = "paralelepipedo"
+let word = 'paralelepipedo'
 console.log(word.length)
 let num = 1234
 console.log(num.length)
@@ -48,14 +47,14 @@ console.log(String(num).length)
 */
 
 let numero = 387.665546897
-console.log(numero.toFixed(2).replace(".",","))
+console.log(numero.toFixed(2).replace('.', ','))
 
 /*
 Transforme letras minusculas em maiusculas. Faça o contrario tbm... 
 Para transformar uma string em letras maiúsculas pode-se usar o método toUpperCase(), e ao contrário, também é possível usar o toLowerCase() para transformar uma string em todas letras minúsculas.
 */
 
-let letra = "programar é muito bom"
+let letra = 'programar é muito bom'
 console.log(letra.toLowerCase().toUpperCase())
 
 /*
@@ -65,9 +64,8 @@ Encontrando palavras em frases
 Para verificar se um texto possui uma palavra específica, podemos usar o método includes(), passando como argumento a palavra a ser verificada, que retorna um valor true se encontrar a palavra, e falso se não, lembrando sempre que o método é case sensitive.
 Verificar se o texto contém a palavra amor
 */
-let phrase = " eu quero viver o amor"
-console.log(phrase.includes("amor"))
-
+let phrase = ' eu quero viver o amor'
+console.log(phrase.includes('amor'))
 
 /*
     Separando strings
@@ -77,10 +75,10 @@ Para separar um texto por espaços, pode-se usar o método split(" "), que trans
 Separe um texto que contem espaços, em um novo array onde cada texto é uma posição do arra. Depois disso, transforme o arra em um texto e onde eram espaços, coloque _
 */
 
-let text = "eu quero viver o amor"
-let myArray = phrase.split(" ")
+let text = 'eu quero viver o amor'
+let myArray = phrase.split(' ')
 console.log(myArray)
-let phraseWithUnderscore = myArray.join("_")
+let phraseWithUnderscore = myArray.join('_')
 console.log(phraseWithUnderscore.toLowerCase())
 
 /*
@@ -103,11 +101,15 @@ Para contar a quantidade de elementos em um array pode-se usar o método length.
 Contar elementos de um array
 */
 
-console.log ([
-    "a",
-    {type:"array"},
-    function () {return "alo"},
-]. length)
+console.log(
+    [
+        'a',
+        { type: 'array' },
+        function () {
+            return 'alo'
+        }
+    ].length
+)
 
 /*
     Strings para arrays
@@ -117,7 +119,7 @@ Para transformar uma string em um array, pode-se usar o objeto Array com o méto
 Transformar uma cadeia de caracteres em elementos de um array
 */
 
-let senha = "manipulação"
+let senha = 'manipulação'
 console.log(Array.from(senha))
 
 /*
@@ -125,14 +127,22 @@ console.log(Array.from(senha))
 
 Existem várias maneiras de manipular arrays, como: o método push(), que adiciona um elemento no final do array, o método unshift(), que adiciona um elemento no começo do array, o método pop(), que retira um elemento do final do array, o método shift(), que retira um elemento do começo do array, o método slice(), que recebe como argumentos a posição de início e a posição do fim da parte que você quer selecionar, e retorna os valores destas posições, o método splice(), que recebe como argumentos a posição de início e a quantidade de elementos que você quer remover e o método indexOff(), que encontra o index do valor que recebe como argumento em um array.
 */
-    let techs = ("html", "css", "js")
-/*
-    * adicionar um item no fim
-    * adicionar no começo
-    * remover do fim
-    * remover do começo
-    * pegar somente alguns elementos do array
-    * remover 1 ou mais itens de qualquer posição do array
-    * encontrar a posição de um elemnto no array
-*/
+let techs = ["html", "css", "js"]
 
+ //* adicionar um item no fim
+ techs.push("nodejs")
+ //* adicionar no começo
+ techs.unshift("sql")
+ //* remover do fim
+ //techs.pop()
+ //* remover do começo
+ //techs.shift()
+ //* pegar somente alguns elementos do array
+ //console.log(techs.slice(1,3))
+ //* remover 1 ou mais itens de qualquer posição do array
+ //techs.splice(1, 1)
+ //* encontrar a posição de um elemnto no array
+ let index = techs.indexOf('css')
+ techs.splice(index,1)
+ 
+console.log(techs)
